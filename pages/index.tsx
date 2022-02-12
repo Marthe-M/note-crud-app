@@ -145,7 +145,7 @@ const Home = ({ notes }: Notes) => {
         </form>
         <div className="notes-container">
           <ul className="notes-list">
-            {sortedNotes.map(note => (
+            {sortedNotes && sortedNotes.map(note => (
               <li className="note-element" key={note.id}><div className="note-title"><h3>{note.title}</h3><AiOutlineRead style={iconStyleTwo} /></div>
                 <p className="note-content">{note.content}</p>
                 <p className="note-date">Created at: {note.createdAt.toString().split('GMT+0100 (Midden-Europese standaardtijd)')}</p>
