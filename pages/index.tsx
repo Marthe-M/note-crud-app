@@ -48,7 +48,7 @@ const Home = ({ notes }: Notes) => {
 
   async function create(data: FormData) {
     try {
-      fetch('http://localhost:3000/api/create', {
+      fetch('https://note-crud-app.vercel.app/api/create', {
         body: JSON.stringify(data),
         headers: {
           'Content-type': 'application/json'
@@ -65,7 +65,7 @@ const Home = ({ notes }: Notes) => {
 
   async function deleteNote(id: string) {
     try {
-      fetch(`http://localhost:3000/api/delete/${id}`, {
+      fetch(`https://note-crud-app.vercel.app/api/delete/${id}`, {
         headers: {
           'Content-type': 'application/json'
         },
@@ -80,7 +80,7 @@ const Home = ({ notes }: Notes) => {
 
   async function updateNote(data: FormData, id: string) {
     try {
-      fetch(`http://localhost:3000/api/update/${id}`, {
+      fetch(`https://note-crud-app.vercel.app/api/update/${id}`, {
         body: JSON.stringify(data),
         headers: {
           'Content-type': 'application/json'
